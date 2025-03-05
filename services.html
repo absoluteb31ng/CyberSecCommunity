@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/services.css">
+    <script src="js/services.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,26 +16,100 @@
                 <li><a href="about.html">Sobre Nosotros</a></li>
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="resource.html">Recursos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    
+    <div class="container">
+        <section>
+            <h2>Lista de Servicios</h2>
+            <div class="service-container">
+                <button class="nav-arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="service-list">
+                    <div class="service-card">
+                        <h3>Análisis de Vulnerabilidades</h3>
+                        <img src="img/vulnerabilidadas.jpg" alt="Análisis de Vulnerabilidades" class="service-img">
+                        <p>Detectamos y corregimos fallos de seguridad en tus sistemas.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Pruebas de Penetración</h3>
+                        <img src="img/pentesting.jpg" alt="Pruebas de Penetración" class="service-img">
+                        <p>Simulamos ataques cibernéticos para evaluar tu seguridad.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Forense Digital</h3>
+                        <img src="img/forensia.jpg" alt="Forense Digital" class="service-img">
+                        <p>Investigamos incidentes de seguridad y recuperamos evidencia digital.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Auditoría de Seguridad</h3>
+                        <img src="img/auditoria.png" alt="Auditoría de Seguridad" class="service-img">
+                        <p>Evaluamos la seguridad de tu infraestructura de TI con informes detallados.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Capacitación en Ciberseguridad</h3>
+                        <img src="img/capacitacion-en-ciberseguridad.svg" alt="Capacitación en Ciberseguridad" class="service-img">
+                        <p>Formamos a tu equipo en mejores prácticas para evitar ataques cibernéticos.</p>
+                    </div>
+                </div>
+                <button class="nav-arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
 
-    <section>
-        <h2>Lista de Servicios</h2>
-        <ul>
-            <li>Análisis de vulnerabilidades</li>
-            <li>Pruebas de penetración</li>
-            <li>Forensia digital</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Planes y Precios</h2>
-        <p>Consulta nuestros planes personalizados.</p>
-    </section>
-
+        <section>
+            <h2>Planes y Precios</h2>
+            <table class="pricing-table">
+                <tr>
+                    <th>Plan</th>
+                    <th>Servicios Incluidos</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Básico</td>
+                    <td>Análisis de vulnerabilidades</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Intermedio</td>
+                    <td>Pruebas de penetración + Análisis de vulnerabilidades</td>
+                    <td>$250</td>
+                </tr>
+                <tr>
+                    <td>Avanzado</td>
+                    <td>Forense digital + Todos los servicios</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Corporativo</td>
+                    <td>Todos los servicios + Soporte dedicado</td>
+                    <td>$1000</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Testimonios</h2>
+            <p>"Gracias a su análisis de seguridad, evitamos un gran ataque cibernético." - Empresa X</p>
+            <p>"Su capacitación en ciberseguridad mejoró la seguridad de nuestra empresa." - Cliente Y</p>
+        </section>
+        
+        <section>
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    
     <footer>
-        <p>© 2025 Consultorio de Ciberseguridad</p>
+        <p>© 2025 Consultorio de Ciberseguridad | Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
