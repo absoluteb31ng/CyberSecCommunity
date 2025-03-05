@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Discusión</title>
+    <link rel="stylesheet" href="css/forum.css">
+</head>
+<body>
+    <header>
+        <h1>Foro de Discusión</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="resource.html">Recursos</a></li>
+                <li><a href="forum.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="forum">
+        <h2>Publica un tema</h2>
+        <input type="text" id="topic" placeholder="Escribe un tema...">
+        <button onclick="addTopic()">Publicar</button>
+
+        <h2>Temas Recientes</h2>
+        <ul id="discussion-list"></ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Consultorio de Ciberseguridad</p>
+    </footer>
+
+    <script src="js/forum.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio de Ciberseguridad</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Consultorio de Ciberseguridad</h1>
+        <button id="theme-toggle">🌙</button>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="resource.html">Recursos</a></li>
+                <li><a href="forum.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <img id="seguridad" src="img/seguridad.jpg" alt="Seguridad">
+        <h2>Protege tu información con expertos en seguridad</h2>
+        <p>Ofrecemos consultas gratuitas y soluciones personalizadas.</p>
+        <button id="open-form">¡Agenda tu consulta gratis!</button>
+    </section>
+
+    <section id="form-section" class="hidden">
+        <h2>Agenda tu Consulta</h2>
+        <form id="consulta-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
