@@ -6,10 +6,9 @@ Este proyecto web surge como una solución para brindar **consultoría en cibers
 La idea es crear un **espacio colaborativo mantenido por la comunidad**, donde expertos y aprendices puedan interactuar, resolver dudas y mejorar la seguridad digital de distintos sectores.
 
 ## Para acceder a la paginas, ingresa a la siguiente URL
-´´´
-
-´´´
-
+```
+https://absoluteb31ng.github.io/CyberSecCommunity/
+```
 ## ✅ Ventajas Principales
 - 🌍 **Plataforma mantenida por la comunidad**: Facilita el aprendizaje colaborativo y permite compartir experiencias.
 - 💼 **Oportunidad para profesionales sin empleo**: Un espacio donde pueden ofrecer servicios de consultoría y ganar experiencia.
