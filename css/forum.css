@@ -1,0 +1,32 @@
+.forum {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.forum input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.forum button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#discussion-list {
+    list-style: none;
+    padding: 0;
+}
+
+#discussion-list li {
+    padding: 10px;
+    background: #f1f1f1;
+    margin-top: 5px;
+    border-radius: 5px;
+}
