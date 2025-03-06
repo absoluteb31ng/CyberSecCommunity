@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script defer src="js/contact.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Nuestros Servicios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="resource.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Encuesta de Preferencias</h2>
+        <div class="personal">
+            <section>
+                <h3>Contesta la siguiente encuesta</h3>
+                <p>Para asegurarnos de recomendarte la mejor opción, contesta el siguiente formulario.</p>
+
+                <form id="survey-form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="servicio">¿Qué servicio te interesa?</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="vulnerabilidades">Análisis de Vulnerabilidades</option>
+                        <option value="forense">Forense Digital</option>
+                        <option value="auditoria">Auditoría de Seguridad</option>
+                        <option value="capacitacion">Capacitación de Personas</option>
+                    </select>
+
+                    <label for="mensaje">Comentarios adicionales:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="mensaje-exito" class="oculto">¡Formulario enviado con éxito!</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
