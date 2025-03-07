@@ -148,12 +148,12 @@ body.dark-theme footer {
     background-color: #222;
 }
 
-body.dark-theme section.noticias {
+body.dark-theme .noticias {
     background-color: #2e2d2d;
 
 }
 
-body.dark-theme section.estadisticas {
+body.dark-theme .estadisticas {
     background-color: #222;
 }
 .news-item a {
