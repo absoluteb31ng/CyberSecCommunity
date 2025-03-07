@@ -148,6 +148,14 @@ body.dark-theme footer {
     background-color: #222;
 }
 
+body.dark-theme section.noticias {
+    background-color: #2e2d2d;
+
+}
+
+body.dark-theme section.estadisticas {
+    background-color: #222;
+}
 .news-item a {
     color: #007bff;
     text-decoration: none;
