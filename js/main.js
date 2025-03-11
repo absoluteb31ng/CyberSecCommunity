@@ -45,5 +45,41 @@ const loadNews = async () => {
     }
 };
 
-// cargar las noticias
 loadNews();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonios = [
+        {
+            mensaje: "🔐 'Gracias a Consultorio de Ciberseguridad, nuestra empresa evitó una filtración de datos. ¡100% recomendado!'",
+            autor: "- Ana López, CEO de TechSafe"
+        },
+        {
+            mensaje: "🛡️ 'Sus análisis de vulnerabilidades nos permitieron mejorar la seguridad de nuestra red interna.'",
+            autor: "- Juan Pérez, Administrador de Sistemas"
+        },
+        {
+            mensaje: "💻 'La capacitación en ciberseguridad nos ayudó a fortalecer la seguridad de nuestros empleados.'",
+            autor: "- Luis Ramírez, Responsable de TI"
+        }
+    ];
+
+    let index = 0;
+    const container = document.getElementById("testimonial-container");
+    const button = document.getElementById("next-testimonial");
+
+    function mostrarTestimonio() {
+        container.innerHTML = `
+            <div class="testimonial">
+                <p>${testimonios[index].mensaje}</p>
+                <span>${testimonios[index].autor}</span>
+            </div>
+        `;
+    }
+
+    button.addEventListener("click", function () {
+        index = (index + 1) % testimonios.length;
+        mostrarTestimonio();
+    });
+
+    mostrarTestimonio();
+});
