@@ -19,7 +19,7 @@ openFormButton.addEventListener('click', () => {
 const newsContainer = document.getElementById('news-container');
 
 const loadNews = async () => {
-    const apiKey = 'PSR-rf hjj2rjksdkf3994idfospe32efd000d0soewfkldsDFEWdfo3j2wefksle2fdsdf';
+    const apiKey = 'f474e03cbb4b41599aaccd0d6b86d336';
     const apiUrl = `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=${apiKey}`;
 
     try {
