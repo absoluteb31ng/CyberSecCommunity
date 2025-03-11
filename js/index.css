@@ -1,0 +1,269 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+}
+
+.intro h2 {
+    font-size: 2rem;
+}
+
+.intro button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#form-section {
+    padding: 20px;
+    background-color: #e9ecef;
+    display: none;
+}
+
+#form-section.hidden {
+    display: none;
+}
+
+#consulta-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#consulta-form input,
+#consulta-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#consulta-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.noticias {
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.noticias h2 {
+    font-size: 2rem;
+}
+
+.news-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.estadisticas {
+    padding: 30px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-theme header {
+    background-color: #222;
+}
+
+body.dark-theme .intro {
+    background-color: #333;
+}
+
+body.dark-theme #form-section {
+    background-color: #444;
+}
+
+body.dark-theme footer {
+    background-color: #222;
+}
+
+body.dark-theme .noticias {
+    background-color: #2e2d2d;
+
+}
+
+body.dark-theme .estadisticas {
+    background-color: #222;
+}
+.news-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.testimonios {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.testimonios h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+#next-testimonial {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#next-testimonial:hover {
+    background-color: #0056b3;
+}
+
+body.dark-theme .testimonios {
+    background-color: #5e2323;
+}
+
+body.dark-theme .testimonial {
+    background-color: #2e2d2d;
+    color: white;
+}
+
+body.dark-theme .testimonial span {
+    color: #bbb;
+}
+
+body.dark-theme #next-testimonial {
+    background-color: #28a745;
+}
+
+body.dark-theme #next-testimonial:hover {
+    background-color: #1e7e34;
+}
+
+.comparacion {
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+}
+
+.tabla-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px; /* Evita que se encoja demasiado */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
