@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos</title>
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/resource.css">
+    <script src="js/resource.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,15 +20,37 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Documentación</h2>
-        <p>Accede a guías y documentación técnica.</p>
-    </section>
-
-    <section>
-        <h2>Enlaces a Talleres</h2>
-        <p>Únete a nuestros cursos de seguridad.</p>
-    </section>
+    <div class="container">
+        <section>
+            <h2 onclick="toggleSection('docContent')">Documentación ▼</h2>
+            <div id="docContent">
+                <p>Accede a documentación sobre hacking y algunos de los sitios más populares para aprender y practicar.</p>
+                <div class="image-container">
+                    <a href="https://www.hackthebox.com/"><img src="img/htb.png" alt="Hack the Box"></a>
+                    <a href="https://tryhackme.com/"><img src="img/TRY.jpg" alt="TryHackMe"></a>
+                </div>
+                <p>Hack The Box y TryHackMe son plataformas populares que ofrecen:</p>
+                <ul>
+                    <li>Laboratorios interactivos para practicar hacking ético.</li>
+                    <li>Rutas de aprendizaje estructuradas con cursos y desafíos.</li>
+                    <li>Comunidad activa para resolver dudas y compartir conocimientos.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2 onclick="toggleSection('labsContent')">Laboratorios Gratuitos ▼</h2>
+            <div id="labsContent">
+                <p>Aquí tienes algunos entornos gratuitos para practicar:</p>
+                <ul>
+                    <li>VulnHub</li>
+                    <li>HTB Labs</li>
+                    <li>Metasploitable</li>
+                    <li>Juice Shop de OWASP</li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <p>© 2025 Consultorio de Ciberseguridad</p>
