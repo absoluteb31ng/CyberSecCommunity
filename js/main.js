@@ -15,35 +15,40 @@ openFormButton.addEventListener('click', () => {
     formSection.classList.toggle('hidden');
 });
 
-// Cargar noticias
 const newsContainer = document.getElementById('news-container');
 
 const loadNews = async () => {
-    const apiKey = 'f474e03cbb4b41599aaccd0d6b86d336';
-    const apiUrl = `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=${apiKey}`;
+    const apiKey = '878a001269f043e8876d9b8f0b8c0eee';  // Reemplaza con tu API Key
+    const apiUrl = `https://api.worldnewsapi.com/search-news?api-key=${apiKey}&text=cybersecurity&sort=date`;
 
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        
-        if (data.status === 'ok') {
-            data.articles.forEach(news => {
+
+        // console.log(data); // Para depuración, revisa la estructura de la respuesta
+
+        if (data.news && data.news.length > 0) {
+            data.news.forEach(news => {
                 const newsItem = document.createElement('div');
                 newsItem.classList.add('news-item');
                 newsItem.innerHTML = `
                     <h3><a href="${news.url}" target="_blank">${news.title}</a></h3>
-                    <p>${news.description || 'No description available.'}</p>
+                    <p>${news.text || 'No description available.'}</p>
                 `;
                 newsContainer.appendChild(newsItem);
             });
         } else {
-            newsContainer.innerHTML = '<p>No se pudieron cargar las noticias.</p>';
+            newsContainer.innerHTML = '<p>No se encontraron noticias.</p>';
         }
     } catch (error) {
         newsContainer.innerHTML = '<p>Error al cargar las noticias.</p>';
         console.error(error);
     }
 };
+
+// Llamar a la función para cargar noticias
+loadNews();
+
 
 loadNews();
 
