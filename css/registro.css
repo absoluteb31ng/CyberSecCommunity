@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1e1e1e;
+    color: #fff;
+    background: url('../img/registro.jpg');
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffcc00;
+}
+
+.search input {
+    background: transparent;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+}
+
+.search i {
+    color: white;
+    margin-left: 5px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.icon {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.icon i {
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon i:hover {
+    color: #ffcc00;
+}
+
+.login {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+.login h2 {
+    margin-bottom: 20px;
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.input i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.check {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.check a {
+    color: white;
+    text-decoration: none;
+}
+
+.check a:hover {
+    text-decoration: underline;
+}
+
+.button .btn {
+    width: 100%;
+    padding: 10px;
+    background: crimson;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button .btn:hover {
+    background: darkred;
+}
+
+.signup {
+    margin-top: 20px;
+}
+
+.signup a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+/* 🎯 RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .search input {
+        font-size: 14px;
+        width: 80px;
+    }
+}
