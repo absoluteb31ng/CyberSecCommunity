@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registro Seguro</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
+    <script defer src="js/registro.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Buscar...">
+            <a><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <a href="#" class="logo">Absoluteb31ng</a>
+            <h2>Bienvenido</h2>
+            <h3>A nuestra comunidad</h3>
+            <p>Explora y encuentra nuevas oportunidades.</p>
+            <div class="icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+
+        <div class="login">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form" method="POST">
+                <input type="hidden" id="csrf-token" value="">
+                <div class="input">
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="check">
+                    <label><input type="checkbox"> Recuérdame </label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="button">
+                    <button type="submit" class="btn">Iniciar Sesión</button>
+                </div>
+            </form>
+            <div class="signup">
+                <p>¿No tienes una cuenta?</p>
+                <a href="#">Regístrate</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
