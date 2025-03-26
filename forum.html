@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/forum.css">
 </head>
 <body>
+
     <header>
         <h1>Foro de Discusión</h1>
         <nav>
@@ -16,19 +17,39 @@
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="resource.html">Recursos</a></li>
                 <li><a href="forum.html">Foro</a></li>
-                <li><a href="registro.html">Resgistro</a></li>
+                <li><a href="registro.html">Registro</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="forum">
-        <h2>Publica un tema</h2>
-        <input type="text" id="topic" placeholder="Escribe un tema...">
-        <button onclick="addTopic()">Publicar</button>
+    <main class="container">
+        <!-- Sección de Reglas -->
+        <section class="rules">
+            <h2>Reglas del Foro</h2>
+            <ul>
+                <li>🔹 Respeta a los demás usuarios.</li>
+                <li>🔹 No publiques contenido ofensivo.</li>
+                <li>🔹 Mantén la conversación en el tema.</li>
+                <li>🔹 Usa lenguaje apropiado.</li>
+            </ul>
+        </section>
 
-        <h2>Temas Recientes</h2>
-        <ul id="discussion-list"></ul>
-    </section>
+        <!-- Sección del Foro -->
+        <section class="forum">
+            <h2>Publica un tema</h2>
+            <label for="topic">Escribe un tema:</label>
+            <input type="text" id="topic" placeholder="Escribe un tema...">
+
+            <label class="anonymous-label">
+                <input type="checkbox" id="anonymous"> Publicar como anónimo
+            </label>
+
+            <button type="button" onclick="addTopic()">Publicar</button>
+
+            <h2>Temas Recientes</h2>
+            <ul id="discussion-list"></ul>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Consultorio de Ciberseguridad</p>
