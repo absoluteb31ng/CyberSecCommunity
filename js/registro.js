@@ -45,4 +45,45 @@ document.addEventListener("DOMContentLoaded", function () {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(email);
     }
+
+    const forgotPasswordLink = document.getElementById("forgot-password-link");
+    const registerLink = document.getElementById("register-link");
+
+    const forgotPasswordModal = document.getElementById("forgot-password-modal");
+    const registerModal = document.getElementById("register-modal");
+
+    const closeForgotPassword = document.getElementById("close-forgot-password");
+    const closeRegister = document.getElementById("close-register");
+
+    // Abrir el modal de "Olvidé mi contraseña"
+    forgotPasswordLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        forgotPasswordModal.style.display = "block";
+    });
+
+    // Abrir el modal de "Registrarse"
+    registerLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        registerModal.style.display = "block";
+    });
+
+    // Cerrar el modal de "Olvidé mi contraseña"
+    closeForgotPassword.addEventListener("click", function () {
+        forgotPasswordModal.style.display = "none";
+    });
+
+    // Cerrar el modal de "Registrarse"
+    closeRegister.addEventListener("click", function () {
+        registerModal.style.display = "none";
+    });
+
+    // Cerrar el modal si el usuario hace clic fuera de la ventana del modal
+    window.addEventListener("click", function (event) {
+        if (event.target === forgotPasswordModal) {
+            forgotPasswordModal.style.display = "none";
+        }
+        if (event.target === registerModal) {
+            registerModal.style.display = "none";
+        }
+    });
 });
