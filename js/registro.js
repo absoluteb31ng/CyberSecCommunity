@@ -2,29 +2,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
     const passwordInput = document.getElementById("password");
     const togglePassword = document.getElementById("toggle-password");
-    const csrfToken = document.getElementById("csrf-token");
+    const csrfTokenField = document.getElementById("csrf-token");
 
-    // Generar un token CSRF simple (en un entorno real, debería generarse en el servidor)
+    // Generar un token CSRF aleatorio y almacenarlo en sessionStorage
     function generateCSRFToken() {
-        return btoa(Date.now().toString());
+        return window.btoa(crypto.getRandomValues(new Uint8Array(16)).join(''));
     }
-    csrfToken.value = generateCSRFToken();
 
-    // Alternar la visibilidad de la contraseña
+    if (!sessionStorage.getItem("csrfToken")) {
+        sessionStorage.setItem("csrfToken", generateCSRFToken());
+    }
+
+    csrfTokenField.value = sessionStorage.getItem("csrfToken");
+
+    // Alternar visibilidad de la contraseña
     togglePassword.addEventListener("click", function () {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            togglePassword.classList.add("visible");
-        } else {
-            passwordInput.type = "password";
-            togglePassword.classList.remove("visible");
-        }
+        const isPassword = passwordInput.getAttribute("type") === "password";
+        passwordInput.setAttribute("type", isPassword ? "text" : "password");
+        togglePassword.classList.toggle("visible", isPassword);
     });
 
     // Validación del formulario antes de enviarlo
     loginForm.addEventListener("submit", function (event) {
-        const email = document.getElementById("email").value;
-        const password = passwordInput.value;
+        const email = document.getElementById("email").value.trim();
+        const password = passwordInput.value.trim();
 
         if (!email || !password) {
             alert("Todos los campos son obligatorios.");
