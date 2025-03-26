@@ -12,7 +12,7 @@ function addTopic() {
     let discussionList = document.getElementById("discussion-list");
 
     // Generar nombre de usuario
-    let username = isAnonymous ? "Anónimo 🤖" : "Usuario";
+    let username = isAnonymous ? "Anónimo 👤" : "Usuario";
 
     // Crear nuevo tema con animación
     let newTopic = document.createElement("li");
