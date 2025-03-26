@@ -16,6 +16,7 @@
             <a href="about.html">Sobre Nosotros</a>
             <a href="services.html">Servicios</a>
             <a href="contact.html">Contacto</a>
+            <a href="forum.html">Foro</a>
         </nav>
         <div class="search">
             <input type="text" placeholder="Buscar...">
@@ -51,7 +52,7 @@
                 </div>
                 <div class="check">
                     <label><input type="checkbox"> Recuérdame </label>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#" id="forgot-password-link">¿Olvidaste tu contraseña?</a>
                 </div>
                 <div class="button">
                     <button type="submit" class="btn">Iniciar Sesión</button>
@@ -59,9 +60,35 @@
             </form>
             <div class="signup">
                 <p>¿No tienes una cuenta?</p>
-                <a href="#">Regístrate</a>
+                <a href="#" id="register-link">Regístrate</a>
             </div>
         </div>
     </section>
+
+    <!-- Modal de "Olvidé mi contraseña" -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-forgot-password">&times;</span>
+            <h2>Recuperar Contraseña</h2>
+            <form id="forgot-password-form">
+                <input type="email" id="forgot-email" placeholder="Introduce tu correo electrónico" required>
+                <button type="submit" class="btn">Recuperar Contraseña</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de "Registrarse" -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="register-form">
+                <input type="email" id="register-email" placeholder="Correo electrónico" required>
+                <input type="password" id="register-password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
